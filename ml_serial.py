@@ -53,7 +53,3 @@ print("検出率 = " + str(recall_score(y_test, predicted)))
 # F値, F1 = 2 * (precision * recall) / (precision + recall)
 print("F値 = " + str(f1_score(y_test, predicted)))
 
-
-#関数
-
-
