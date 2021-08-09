@@ -31,7 +31,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_std, y, test_size = 0.5)
 
 
 def LinSVC():
-    lin_clf = svm.LinearSVC(tol=1e-5, max_iter=10000)
+    lin_clf = svm.LinearSVC()
     lin_clf.fit(X_train, y_train)
     predicted = lin_clf.predict(X_test)
     print("LinearSVCの正解率 = " + str('{:.2f}'.format(accuracy_score(y_test, predicted))))
@@ -46,6 +46,14 @@ def KNN():
     print("KNNのF値 = " + str('{:.2f}'.format(f1_score(y_test, predicted))))
     return predicted
 
+def SVC():
+    clf = svm.SVC()
+    clf.fit(X_train, y_train)
+    predicted = clf.predict(X_test)
+    print("SVCの正解率 = " + str('{:.2f}'.format(accuracy_score(y_test, predicted))))
+    print("SVCのF値 = " + str('{:.2f}'.format(f1_score(y_test, predicted))))
+    return predicted
 
 predicted_LinSVC = LinSVC()
 predicted_KNN = KNN()
+predicted_SVC = SVC()
