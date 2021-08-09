@@ -5,8 +5,8 @@
 実行環境：python3.8.3
 
 
-serial.pyの実行方法：time python serial.py\\ 
+serial.pyの実行方法：time python serial.py
 
-serial_def.pyの実行方法：time python serial_def.py\\ 
+serial_def.pyの実行方法：time python serial_def.py
 
 parallel.pyの実行方法：time python parallel.py
